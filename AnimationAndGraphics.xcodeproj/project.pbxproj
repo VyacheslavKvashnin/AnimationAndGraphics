@@ -11,6 +11,7 @@
 		BD27DDC22817C04400AF758B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27DDC12817C04400AF758B /* ContentView.swift */; };
 		BD27DDC42817C04600AF758B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD27DDC32817C04600AF758B /* Assets.xcassets */; };
 		BD27DDC72817C04600AF758B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD27DDC62817C04600AF758B /* Preview Assets.xcassets */; };
+		BD27DDCE2817C39300AF758B /* ShipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27DDCD2817C39300AF758B /* ShipView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BD27DDC12817C04400AF758B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD27DDC32817C04600AF758B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD27DDC62817C04600AF758B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD27DDCD2817C39300AF758B /* ShipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				BD27DDC12817C04400AF758B /* ContentView.swift */,
 				BD27DDC32817C04600AF758B /* Assets.xcassets */,
 				BD27DDC52817C04600AF758B /* Preview Content */,
+				BD27DDCD2817C39300AF758B /* ShipView.swift */,
 			);
 			path = AnimationAndGraphics;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD27DDCE2817C39300AF758B /* ShipView.swift in Sources */,
 				BD27DDC22817C04400AF758B /* ContentView.swift in Sources */,
 				BD27DDC02817C04400AF758B /* AnimationAndGraphicsApp.swift in Sources */,
 			);
