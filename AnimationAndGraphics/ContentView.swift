@@ -28,38 +28,50 @@ struct ContentView: View {
                 
                 ShipView()
                     .frame(width: 200, height: 200, alignment: .center)
-                    .offset(y: 350)
+                    .offset(y: UIScreen.main.bounds.height / 2)
                     .rotationEffect(.degrees(angle))
                     .animation(.linear(duration: 2).repeatForever(autoreverses: true), value: angle)
                 Spacer()
+                
                 ZStack {
                     WaveView(yOffset: startAnimation ? 0.5 : -0.5)
                         .fill(.blue)
-                        .shadow(radius: 8)
-                        .frame(height: 190)
-                        .opacity(0.3)
-                        .rotationEffect(.degrees(180))
                         .animation(.easeInOut(duration: 4).repeatForever(autoreverses: true), value: startAnimation)
+                        .animationStyles(for: 190, and: 0.3)
                     
                     WaveView(yOffset: startAnimation ? -0.3 : 0.3)
                         .fill(.blue)
-                        .shadow(radius: 8)
-                        .frame(height: 230)
-                        .opacity(0.2)
-                        .rotationEffect(.degrees(180))
                         .animation(.easeInOut(duration: 3).repeatForever(autoreverses: true), value: startAnimation)
-                    
+                        .animationStyles(for: 230, and: 0.2)
+                        
                     WaveView(yOffset: startAnimation ? -0.6 : 0.6)
                         .fill(.blue)
-                        .shadow(radius: 8)
-                        .frame(height: 170)
-                        .opacity(0.4)
-                        .padding(.horizontal, -80)
-                        .rotationEffect(.degrees(180))
                         .animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: startAnimation)
+                        .animationStyles(for: 170, and: 0.4)
+                        
                 }
             }
         }.edgesIgnoringSafeArea(.bottom)
+    }
+}
+
+struct AnimationModifier: ViewModifier {
+    let frameHeight: CGFloat
+    let opacity: Double
+    
+    func body(content: Content) -> some View {
+        content
+            .shadow(radius: 8)
+            .frame(height: frameHeight)
+            .opacity(opacity)
+            .padding(.horizontal, -40)
+            .rotationEffect(.degrees(180))
+    }
+}
+
+extension View {
+    func animationStyles(for frameHeight: CGFloat, and opacity: Double) -> some View {
+        modifier(AnimationModifier(frameHeight: frameHeight, opacity: opacity))
     }
 }
 
